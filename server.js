@@ -21,5 +21,5 @@ app.use("/api/auth", require("./routes/api/auth"));
 app.use("/api/posts", require("./routes/api/posts"));
 
 app.listen(PORT, () => {
-  console.log(`MeetBook running on port ${PORT}`);
+  console.log(`DevBook running on port ${PORT}`);
 });
