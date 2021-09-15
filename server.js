@@ -11,7 +11,7 @@ app.use(express.json({ extended: false }));
 const PORT = process.env.PORT || 5000;
 
 app.get("/", (req, res) => {
-  res.send("API RUNNING ON PORT");
+  res.send(`API RUNNING ON PORT ${PORT}`);
 });
 
 //Routes
