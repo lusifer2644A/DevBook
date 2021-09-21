@@ -1,4 +1,3 @@
-/* eslint-disable import/no-anonymous-default-export */
 import { Fragment } from "react";
 import spinner from "./spinner.gif";
 
