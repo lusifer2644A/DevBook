@@ -2,7 +2,7 @@ import React, { Fragment, useEffect } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 
-import Loader from "../layouts/Loader";
+import Loader from "../layouts/Loader.js";
 import { getPosts } from "../../actions/post";
 import PostItem from "./PostItem";
 import PostForm from "./PostForm";

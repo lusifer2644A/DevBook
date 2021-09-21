@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 
 import PostItem from "../Posts/PostItem";
-import Loader from "../layouts/Loader";
+import Loader from "../layouts/Loader.js";
 import { getPost } from "../../actions/post";
 import CommentForm from "./CommentForm";
 import CommentItem from "./CommentItem";

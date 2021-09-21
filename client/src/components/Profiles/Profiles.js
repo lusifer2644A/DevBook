@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import React, { Fragment, useEffect } from "react";
-import Loader from "../layouts/Loader";
+import Loader from "../layouts/Loader.js";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 

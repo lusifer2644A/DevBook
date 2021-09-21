@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 
 import { getProfileById } from "../../actions/profile";
-import Loader from "../layouts/Loader";
+import Loader from "../layouts/Loader.js";
 import ProfileTop from "./ProfileTop";
 import ProfileAbout from "./ProfileAbout";
 import ProfileExperience from "./ProfileExperience";
