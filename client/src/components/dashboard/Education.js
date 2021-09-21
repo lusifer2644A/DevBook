@@ -8,7 +8,7 @@ import { connect } from "react-redux";
 const Education = ({ education, deleteEducation }) => {
   const educationBody = education.map((edu) => {
     return (
-      <tr key={edu.id}>
+      <tr key={edu._id}>
         <td>{edu.school}</td>
         <td className="hide-sm">{edu.degree}</td>
         <td className="hide-sm">
@@ -20,7 +20,10 @@ const Education = ({ education, deleteEducation }) => {
           )}
         </td>
         <td>
-          <button className="btn btn-danger" onClick={deleteEducation(edu._id)}>
+          <button
+            className="btn btn-danger"
+            onClick={(e) => deleteEducation(edu._id)}
+          >
             Delete
           </button>
         </td>

@@ -110,7 +110,7 @@ router.put("/like/:post_id", auth, async (req, res) => {
     post.likes.unshift(newLike);
     await post.save();
 
-    res.json(post);
+    res.json(post.likes);
   } catch (err) {
     console.error(err.message);
     if (err.kind === "ObjectId")
@@ -133,12 +133,14 @@ router.put("/unlike/:post_id", auth, async (req, res) => {
     if (userLiked.length === 0)
       return res.status(400).json({ msg: "User has not yet liked" });
 
-    const removeIndex = post.likes.map((item) => item.id).indexOf(req.user.id);
+    const removeIndex = post.likes
+      .map((item) => item.user)
+      .indexOf(req.user.id);
     post.likes.splice(removeIndex, 1);
 
     await post.save();
 
-    res.json(post);
+    res.json(post.likes);
   } catch (err) {
     console.error(err.message);
     if (err.kind === "ObjectId")
@@ -187,7 +189,7 @@ router.put(
 //@route   DELETE  api/posts/comment/:post_id/:comment_id
 //@desc    delete comments to a post
 //@access  Private
-router.put("/comment/:post_id/:comment_id", auth, async (req, res) => {
+router.delete("/comment/:post_id/:comment_id", auth, async (req, res) => {
   try {
     const post = await Post.findById(req.params.post_id);
 

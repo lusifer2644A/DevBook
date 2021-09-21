@@ -4,10 +4,10 @@ import PropTypes from "prop-types";
 import { deleteExperience } from "../../actions/profile";
 import { connect } from "react-redux";
 
-const Experience = ({ experience }) => {
+const Experience = ({ experience, deleteExperience }) => {
   const experienceBody = experience.map((exp) => {
     return (
-      <tr key={exp.id}>
+      <tr key={exp._id}>
         <td>{exp.company}</td>
         <td className="hide-sm">{exp.title}</td>
         <td className="hide-sm">
@@ -21,7 +21,7 @@ const Experience = ({ experience }) => {
         <td>
           <button
             className="btn btn-danger"
-            onClick={deleteExperience(exp._id)}
+            onClick={(e) => deleteExperience(exp._id)}
           >
             Delete
           </button>
