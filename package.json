@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "A social media application",
   "main": "server.js",
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
     "start": "node server",
     "server": "nodemon server --ignore client",
