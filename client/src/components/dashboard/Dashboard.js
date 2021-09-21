@@ -5,7 +5,6 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 
 import { deleteAccount, getCurrentProfile } from "../../actions/profile";
-import Loader from "../layouts/Loader";
 import { DashboardActions } from "./DashboardActions";
 import Experience from "./Experience";
 import Education from "./Education";
@@ -21,7 +20,7 @@ const Dashboard = ({
   }, []);
 
   return loading && profile === null ? (
-    <Loader />
+    "Loading..."
   ) : (
     <Fragment>
       <h1 className="large text-primary">DashBoard</h1>
