@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 
 import { deleteAccount, getCurrentProfile } from "../../actions/profile";
-import Loader from "../layouts/Loader";
+import Loader from "../layouts/Loader.js";
 import { DashboardActions } from "./DashboardActions";
 import Experience from "./Experience";
 import Education from "./Education";
